@@ -1,1 +1,43 @@
-<p>details works!</p>
+<div class="container">
+
+    <nav class="pagination mt-5" role="navigation" aria-label="pagination">
+      <!-- <button class="button is-info" (click)="previos()">Previous</button>
+      <button class="button is-info" [disabled]='page > 360' (click)="next()">Next page</button> -->
+    </nav>
+  
+    <!-- <div *ngIf="page == 368" class="notification is-danger">
+      <strong>    There's no more game to show</strong>
+    </div> -->
+  
+        <div class="columns is-multiline  mt-5" style="cursor: pointer;">
+          <div class="column is-one-quarter" >
+              <div class="card">
+                  <div class="card-image">
+                    <figure class="image is-4by3">
+                      <img src="game?.thumbnail" alt="Placeholder image"> 
+                    </figure>
+                  </div>
+                  <div class="card-content">
+                    <div class="media">
+                      <div class="media-left">
+                        <figure class="image is-48x48">
+                          <img src="game?.thumbnail" alt="Placeholder image">
+                        </figure>
+                      </div>
+                      <div class="media-content">
+                        <p class="title is-4">game.title</p>
+                        <p class="subtitle is-6">game.developer</p>
+                      </div>
+                    </div>
+                
+                    <div class="content">
+                     game.short_description
+                      <a>Platform game.platform</a>
+                      <br>
+                      <time datetime="2016-1-1">game.release_date </time>
+                    </div>
+                  </div>
+                </div>
+          </div>
+        </div>
+  </div>

@@ -23,4 +23,21 @@ export class GamesService {
       console.log(error);
     }
   }
+
+  public getGameById(id: string | number): any {
+    try {
+  
+      const headers = new HttpHeaders();
+      headers.set(`${environment.xrapidapihost}`, `${environment.rapiHost}`);
+      headers.set(`${environment.xrapidapikey}`, `${environment.rapiKey}`);
+      const params = new HttpParams().set('id', String(id));
+      return this.httpClient.get<any>(`https://www.mmobomb.com/api1/games`, {headers}).pipe(
+        map((games) => {
+          return games;
+        })
+      );
+    } catch (error) {
+      console.log(error);
+    }
+  }
 }
